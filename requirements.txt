@@ -1,0 +1,8 @@
+Jinja2==2.8
+MarkupSafe==0.23
+PyYAML==3.11
+backports-abc==0.4
+pycares==1.0.0
+pycurl==7.21.5
+redis==2.10.5
+tornado==4.3

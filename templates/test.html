@@ -1,0 +1,11 @@
+hello {{ name }} 
+ <table>
+{% for item in places.results %}
+<TR>
+   <TD class="c1"><IMG src="favicon.ico"></TD>
+   <TD class="c2">{{item.name}}</TD>
+   <TD class="c3">{{item.id}}</TD>
+</TR>
+{% endfor %}
+</table>
+

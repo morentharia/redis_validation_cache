@@ -1,0 +1,67 @@
+COMMON:
+  DEBUG: False
+  PORT: 8888
+  DNS_RECORD_TTL: 600
+  REDIS: 
+    CLIENT: {
+      'host': 'localhost',
+      'port': 6379,
+      'db': 0,
+    }
+    TORNADO_CLIENT: {
+      'key_ttl': 10
+    }
+
+  JINJA: 
+    TEMPLATE_ROOT: './templates' 
+    SETTINGS: {
+      'autoescape': True,
+    }
+
+  CURL:
+    MAX_CLIENTS: 10
+    CONNECT_TIMEOUT: 5
+    REQUEST_TIMEOUT: 5
+
+  DB_API:
+    HOST: 'localhost'
+    PORT: 8000
+    CACHE_KEY_TTL: 8
+
+  # LOG_CFG:
+  #   version: 1
+  #   disable_existing_loggers: False
+  #   formatters:
+  #     simple:
+  #       format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+  #     default_old:
+  #       format: '%(asctime)s %(levelname)-8s %(name)-15s %(message)s'
+  #       datefmt: '%Y-%m-%d %H:%M:%S'
+  #     default:
+  #       format: '%(levelname)-8s %(message)s'
+  #       datefmt: '%Y-%m-%d %H:%M:%S'
+  #   handlers:
+  #     stdout:
+  #       class: logging.StreamHandler
+  #       formatter: simple
+  #       stream: ext://sys.stdout
+
+  #     stderr:
+  #       class: logging.StreamHandler
+  #       formatter: simple
+  #       stream: ext://sys.stderr
+
+
+  #   loggers:
+  #     '':
+  #       level: DEBUG
+  #       handlers: [stdout]
+  #     root:
+  #       level: DEBUG
+  #       handlers: [stdout]
+
+
+DEVELOPMENT:
+  _parent: COMMON
+  DEBUG: True
+  DNS_RECORD_TTL: 3

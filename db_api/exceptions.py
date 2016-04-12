@@ -1,0 +1,2 @@
+class DBApiError(Exception):
+    pass

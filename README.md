@@ -1,1 +1,7 @@
-# redis_validation_cache
+
+
+Тесты 
+
+```
+python -m tornado.test.runtests test.db_api 
+```
